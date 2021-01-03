@@ -1,0 +1,78 @@
+#
+# TARGET
+#
+
+TARGET = a.out
+
+#
+# VARIABLES
+#
+
+# Compiler
+CC = clang
+
+# LLVM opt
+OPT = opt
+
+# LLVM linker
+LINK = llvm-link
+
+# LLVM compiler
+LLC = llc
+
+# Compile-time flags
+CFLAGS = -Xclang -disable-O0-optnone -S -w -emit-llvm -DOS_UNIX=1 -DOS_DOS=0 -DOS_MAC=0 -DDB_FIX=0 -DUSE_STAT=1 -DSAFE_DFT=0 -DCOLLATE=1 -DLIB_DIR=\"lout.lib\" -DFONT_DIR=\"font\" -DMAPS_DIR=\"maps\" -DINCL_DIR=\"include\" -DDATA_DIR=\"data\" -DHYPH_DIR=\"hyph\" -DLOCALE_DIR=\"locale\" -DCHAR_IN=1 -DCHAR_OUT=0 -DLOCALE_ON=1 -DASSERT_ON=1 -pedantic -DDEBUG_ON=0  -DPDF_COMPRESSION=0
+
+# Includes
+INCLUDES =
+
+# Library paths
+LFLAGS =
+
+# Linker flags
+LIBS = -lm
+
+# Source files
+SRCS = $(wildcard *.c)
+
+# Object file
+OBJ = $(TARGET).o
+
+# LLVM IR files
+IRS = $(SRCS:.c=.ll)
+
+#
+# BUILD
+#
+
+.PHONY: depend clean
+
+all:    $(TARGET)
+
+$(TARGET): $(OBJ)
+	@$(CC) -o $(TARGET) $(OBJ) $(LFLAGS) $(LIBS)
+
+%.ll: %.c
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(TARGET).o: $(IRS)
+	@$(LINK) *.ll -S -o $(TARGET).ll
+	@$(OPT) $(PASSES) $(TARGET).ll -S -o $(TARGET)_o.ll
+	@$(LLC) -filetype=obj $(TARGET)_o.ll -o $@
+
+#
+# CLEAN
+#
+
+clean:
+	@$(RM) -f *.o *.ll *~ binary_size.yaml compile_time.yaml diff.txt output.txt output.all verify_output.yaml runtime.csv error.log
+
+cleanup:
+	@$(RM) -f *.o *.ll *~ $(TARGET) binary_size.yaml compile_time.yaml diff.txt output.txt output.all verify_output.yaml runtime.csv error.log
+
+#
+# DEPEND
+#
+depend: $(SRCS)
+	@makedepend $(INCLUDES) $^
+

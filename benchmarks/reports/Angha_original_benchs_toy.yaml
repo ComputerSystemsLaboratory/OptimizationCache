@@ -1,0 +1,10 @@
+- extr_4965-rs_il4965_rs_move_siso_to_other
+- extr_4965-rs_il4965_rs_rate_scale_perform
+- extr_8253.h_i8253_cascade_ns_to_timer_2div
+- extr_a100u2w_orc_load_firmware
+- extr_a4xx_gpu_a4xx_enable_hwcg
+- extr_a5xx_gpu_a5xx_hw_init
+- extr_aacraid_aac_check_firmware
+- extr_aacraid_aacraid_map_command_sg
+- extr_aarp_aarp_rcv
+- extr_ac97_ac97_initmixer

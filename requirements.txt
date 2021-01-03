@@ -1,0 +1,8 @@
+absl-py==0.9.0
+colorit==0.1.0
+pygmo==2.15.0
+PyYAML==5.3.1
+scikit-learn==0.22.2.post1
+scipy==1.4.1
+tqdm==4.50.0
+pandas==0.25.3

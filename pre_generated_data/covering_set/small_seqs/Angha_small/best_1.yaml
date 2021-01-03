@@ -1,0 +1,10 @@
+470:
+  seq:
+  - -early-cse-memssa
+  - -instcombine
+  - -mem2reg
+  - -slp-vectorizer
+  - -instcombine
+  - -sroa
+  - -simplifycfg
+  - -early-cse-memssa

@@ -1,0 +1,42 @@
+typedef a;
+double b, c, d, e, f, g, h, i, j, l, m, n, o, ab, ac;
+double *aa, *p, *q;
+double ad(s) {
+  double x, y, ae, af, ag, ah, ai, aj, ak, r, t, u, v, w, am, an, ao, ap, aq;
+  a k, al;
+  if (al)
+    return 0;
+  ae = fabs(x);
+  ae *= ar();
+  as();
+  u = -aa[k];
+  v = f / ae + k;
+  am = u * at();
+  aq = --aa[k];
+  ao = v * -am * ac - am * aq;
+  an = am * am;
+  r = an * an * b + an * c + an * d + an * e + an * f + an * g;
+  r += ao * am + am;
+  ap = 3 + au();
+  aq = r - ap - 3 - an * ap;
+  v = ao * ap + aq * am;
+  ah = au();
+  ai = v - ah - u;
+  af = n * ah;
+  ag = o * ah + ai * b + q[k];
+  aj = af + ag + p[k] + 3;
+  au();
+  ak = -(aj - 3) - p[k] - af;
+  au();
+  ai = s * aj + s * ak * av();
+  au();
+  u = 3 * d;
+  v = ai - 3 - ah * c + 3 * e;
+  y = u + v;
+  w = -y - u;
+  t = y * y;
+  aj = -t * (h + t * i + t * j + t * l + t * m);
+  r = y * aj / -ab - w + y * w;
+  y = f - r - z();
+  return f * y;
+}

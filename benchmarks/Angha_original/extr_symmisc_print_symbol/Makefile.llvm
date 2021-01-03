@@ -1,0 +1,77 @@
+#
+# TARGET
+#
+
+TARGET = a.out
+
+#
+# VARIABLES
+#
+
+# Compiler
+CC = clang
+
+# LLVM opt
+OPT = opt
+
+# LLVM linker
+LINK = llvm-link
+
+# LLVM compiler
+LLC = llc
+
+# Compile-time flags
+CFLAGS = -S -w -emit-llvm
+
+# Includes
+INCLUDES =
+
+# Library paths
+LFLAGS =
+
+# Linker flags
+LIBS = -lm
+
+# Source files
+SRCS = $(wildcard *.c)
+
+# Object file
+OBJ = $(TARGET).o
+
+# LLVM IR files
+IRS = $(SRCS:.c=.ll)
+
+#
+# BUILD
+#
+
+.PHONY: depend clean
+
+all:    $(TARGET)
+
+$(TARGET): $(OBJ)
+#	$(CC) -o $(TARGET) $(OBJ) $(LFLAGS) $(LIBS)
+
+
+%.ll: %.c
+	@$(CC) $(PASSES) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(TARGET).o: $(IRS)
+	@$(LINK) *.ll -S -o $(TARGET)_o.ll
+	@$(LLC) -filetype=obj $(TARGET)_o.ll -o $@
+
+#
+# CLEAN
+#
+
+clean:
+	@$(RM) *.o *.ll *~
+
+cleanup:
+	@$(RM) *.o *.ll *~ $(TARGET)
+
+#
+# DEPEND
+#
+depend: $(SRCS)
+	@makedepend $(INCLUDES) $^

@@ -1,0 +1,135 @@
+1099:
+  seq:
+  - -sroa
+  - -loop-unroll
+  - -simplifycfg
+  - -correlated-propagation
+  - -indvars
+  - -correlated-propagation
+  - -simplifycfg
+  - -instcombine
+  - -gvn
+  - -simplifycfg
+  - -instcombine
+  - -early-cse-memssa
+  - -jump-threading
+  - -slp-vectorizer
+  - -gvn
+  - -bdce
+  - -simplifycfg
+1167:
+  seq:
+  - -mem2reg
+  - -ipsccp
+  - -jump-threading
+  - -licm
+  - -instcombine
+  - -gvn
+  - -jump-threading
+1177:
+  seq:
+  - -gvn
+  - -instcombine
+  - -simplifycfg
+  - -speculative-execution
+  - -loop-rotate
+  - -instcombine
+  - -jump-threading
+  - -inferattrs
+  - -gvn
+  - -correlated-propagation
+  - -instsimplify
+  - -simplifycfg
+200:
+  seq:
+  - -early-cse-memssa
+  - -tailcallelim
+  - -gvn
+  - -sroa
+  - -aggressive-instcombine
+  - -jump-threading
+  - -simplifycfg
+  - -instsimplify
+  - -early-cse-memssa
+470:
+  seq:
+  - -early-cse-memssa
+  - -instcombine
+  - -mem2reg
+  - -slp-vectorizer
+  - -instcombine
+  - -sroa
+  - -simplifycfg
+  - -early-cse-memssa
+549:
+  seq:
+  - -mem2reg
+  - -mldst-motion
+  - -simplifycfg
+  - -instcombine
+  - -early-cse-memssa
+  - -ipsccp
+  - -simplifycfg
+  - -instcombine
+722:
+  seq:
+  - -instcombine
+  - -sroa
+  - -simplifycfg
+  - -indvars
+  - -early-cse-memssa
+  - -slp-vectorizer
+  - -mldst-motion
+  - -instcombine
+  - -licm
+  - -loop-rotate
+  - -correlated-propagation
+  - -early-cse-memssa
+  - -simplifycfg
+736:
+  seq:
+  - -licm
+  - -loop-rotate
+  - -bdce
+  - -simplifycfg
+  - -gvn
+  - -instcombine
+  - -simplifycfg
+  - -indvars
+  - -licm
+  - -speculative-execution
+  - -simplifycfg
+  - -mem2reg
+  - -adce
+  - -gvn
+  - -instcombine
+  - -speculative-execution
+  - -sroa
+  - -simplifycfg
+957:
+  seq:
+  - -mem2reg
+  - -simplifycfg
+  - -slp-vectorizer
+  - -gvn
+  - -instsimplify
+  - -simplifycfg
+  - -memcpyopt
+  - -gvn
+  - -dse
+  - -instsimplify
+991:
+  seq:
+  - -sroa
+  - -loop-rotate
+  - -reassociate
+  - -licm
+  - -instcombine
+  - -indvars
+  - -early-cse-memssa
+  - -mldst-motion
+  - -correlated-propagation
+  - -jump-threading
+  - -simplifycfg
+  - -instcombine
+  - -early-cse-memssa

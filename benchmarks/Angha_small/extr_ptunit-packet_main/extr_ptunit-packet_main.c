@@ -1,0 +1,66 @@
+struct a {
+  int b
+};
+c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a, b,
+    aa;
+ab() {
+  struct a ac;
+  ad(m);
+  ad(i, n);
+  ad(i, r);
+  ad(e);
+  ad(e - f);
+  ad(f);
+  ad(aa - f);
+  ad();
+  ad(ab - f);
+  ae(d);
+  ae(c);
+  ad(f, s, a);
+  ad(f, s, b);
+  ad(f, s, c);
+  ad(f, s, d);
+  ad(f, s, z);
+  ad(f, s, y);
+  ad(f, s, a);
+  ad(f, s, b);
+  ad(f, s, c);
+  ad(f, s, d);
+  ad(f, s, z);
+  ad(f, s, y);
+  ad(f, u, a);
+  ad(f, u, b);
+  ad(ac, f, u, c);
+  ad(f, u, d);
+  ad(ac, f, u, z);
+  ad(f, u, y);
+  ad(f, t, a);
+  ad(f, t, b);
+  ad(f, t, c);
+  ad(f, t, d);
+  ad(f, t, z);
+  ad(f, t, y);
+  ad(f, k, a);
+  ad(f, k, b);
+  ad(f, k, c);
+  ad(f, k, d);
+  ad(f, k, z);
+  ad(f, k, y);
+  ad(g, d);
+  ad(g, e);
+  ad(g, f);
+  ae(h);
+  ad(d, k);
+  ad(c, m);
+  ad(c, n);
+  ad(c, w);
+  ad(c, x);
+  ad(c, j);
+  ad(c, v);
+  ad(c, l);
+  ad(e, c);
+  ad(c, p);
+  ad(c, q);
+  ad(ac, c, o);
+  af(&ac);
+}

@@ -1,0 +1,50 @@
+clang:
+  O0:
+    goal: 96.0
+    seq:
+    - -O0
+  O1:
+    goal: 53.0
+    seq:
+    - -O1
+  O2:
+    goal: 89.0
+    seq:
+    - -O2
+  O3:
+    goal: 89.0
+    seq:
+    - -O3
+  Os:
+    goal: 55.0
+    seq:
+    - -Os
+  Oz:
+    goal: 56.0
+    seq:
+    - -Oz
+opt:
+  O0:
+    goal: 96.0
+    seq:
+    - -O0
+  O1:
+    goal: 87.0
+    seq:
+    - -O1
+  O2:
+    goal: 89.0
+    seq:
+    - -O2
+  O3:
+    goal: 89.0
+    seq:
+    - -O3
+  Os:
+    goal: 89.0
+    seq:
+    - -Os
+  Oz:
+    goal: 89.0
+    seq:
+    - -Oz

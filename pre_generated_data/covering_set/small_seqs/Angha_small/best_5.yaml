@@ -1,0 +1,65 @@
+1177:
+  seq:
+  - -gvn
+  - -instcombine
+  - -simplifycfg
+  - -speculative-execution
+  - -loop-rotate
+  - -instcombine
+  - -jump-threading
+  - -inferattrs
+  - -gvn
+  - -correlated-propagation
+  - -instsimplify
+  - -simplifycfg
+200:
+  seq:
+  - -early-cse-memssa
+  - -tailcallelim
+  - -gvn
+  - -sroa
+  - -aggressive-instcombine
+  - -jump-threading
+  - -simplifycfg
+  - -instsimplify
+  - -early-cse-memssa
+470:
+  seq:
+  - -early-cse-memssa
+  - -instcombine
+  - -mem2reg
+  - -slp-vectorizer
+  - -instcombine
+  - -sroa
+  - -simplifycfg
+  - -early-cse-memssa
+722:
+  seq:
+  - -instcombine
+  - -sroa
+  - -simplifycfg
+  - -indvars
+  - -early-cse-memssa
+  - -slp-vectorizer
+  - -mldst-motion
+  - -instcombine
+  - -licm
+  - -loop-rotate
+  - -correlated-propagation
+  - -early-cse-memssa
+  - -simplifycfg
+991:
+  seq:
+  - -sroa
+  - -loop-rotate
+  - -reassociate
+  - -licm
+  - -instcombine
+  - -indvars
+  - -early-cse-memssa
+  - -mldst-motion
+  - -correlated-propagation
+  - -jump-threading
+  - -simplifycfg
+  - -instcombine
+  - -early-cse-memssa
