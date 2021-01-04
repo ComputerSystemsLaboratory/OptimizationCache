@@ -20,7 +20,7 @@ python3 $ALG_DIR/levels.py \
         --benchmarks_directory $BENCH_DIR \
         --results_directory $OUT_DIR/levels \
         --benchmarks_filename $BENCH_DIR/reports/MiBench_suite.yaml \
-	--levels O0,Os,0z
+	--levels O0,Os,Oz
 
 # Evaluate the good sequences
 echo "2. EVALUATING THE GOOD SEQUENCES"
