@@ -29,22 +29,25 @@ To install OptimizationCache, follow these two steps:
 
 
 ```
-1. git clone https://github.com/ComputerSystemsLab/OptimizationCache.git
+1. sudo apt install linux-tools-common linux-tools-generic linux-tools-`uname -r` clang llvm python3-yaml creduce
 ```
 
 ```
-2. apt install perf hyperfine clang llvm python3-yaml
+2. wget https://github.com/sharkdp/hyperfine/releases/download/v1.11.0/hyperfine_1.11.0_amd64.deb
+   sudo dpkg -i hyperfine_1.11.0_amd64.deb
 ```
 
 ```
-3. pip3 install -r requirements.txt
+3. git clone https://github.com/ComputerSystemsLab/OptimizationCache.git
 ```
 
 ```
-3. cd <OptimizationCache>/milepost_plugin
+4. cd OptimizationCache
+   pip3 install -r requirements.txt
+   cd milepost_plugin
    mkdir build
    cd build
-   make install
+   make
 ```
 
 ## Benchmarks
