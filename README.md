@@ -47,6 +47,7 @@ To install OptimizationCache, follow these two steps:
    cd milepost_plugin
    mkdir build
    cd build
+   cmake ..
    make
 ```
 
