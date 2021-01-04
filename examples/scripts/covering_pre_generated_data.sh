@@ -24,7 +24,7 @@ python3 $ALG_DIR/levels.py \
 
 # Evaluate the good sequences
 echo "2. EVALUATING THE GOOD SEQUENCES"
-for k in 1 5; do
+for k in 1 5 10 15 20 22; do
    python3 $ALG_DIR/covering.py \
 	--goals $GOAL \
 	--weights $WEIGHT \
