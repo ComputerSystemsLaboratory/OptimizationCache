@@ -54,9 +54,9 @@ class Goals:
         except subprocess.CalledProcessError:
             return float('inf')
 
-        output = ret.stderr.decode("utf-8").split('\n')
+        output = ret.stderr.decode("utf-8").split('\n')        
         insts = [float(item[item.find(':')+2:])
-                 for item in output if 'f25' in item]
+                 for item in output if 'f25_numInstructions' in item]
         return float(sum(insts))
 
     @staticmethod
