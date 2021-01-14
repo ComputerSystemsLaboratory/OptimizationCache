@@ -87,6 +87,9 @@ def execute(argv):
         # Store the results
         IO.dump_yaml(bestk.results, filename)
 
+        # Store the number of the programs cover by each sequence
+        filename = '{}/covering_{}.yaml'.format(FLAGS.results_directory, k)
+        IO.dump_yaml(bestk.covering, filename)
 
 # Execute
 if __name__ == '__main__':
